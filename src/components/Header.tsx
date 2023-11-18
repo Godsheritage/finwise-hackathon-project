@@ -36,6 +36,12 @@ const HeaderComponent = () => {
           <li>
             <Link to={"/budget"}>Budget</Link>
           </li>
+          <li>
+            <Link to= {"/SignUp"}>Sign Up</Link>
+          </li> 
+          <li>
+            <Link to = {"/LogIn"}>LogIn</Link>
+          </li>
         </ul>
       </div>
       <div>
