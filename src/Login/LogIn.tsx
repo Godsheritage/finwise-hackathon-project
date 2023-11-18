@@ -8,7 +8,8 @@ const LogIn = ({setUserName, userName, setPass, pass, Login,setLogin }) => {
   const [LoginPass,setLoginPass ] = useState()
   const [LoginUserName ,setLoginUserName ] = useState()
   const HandleLogInSubmission = () => {
-        if (LoginUserName == Login && LoginPass == pass ){
+    console.log(userName, LoginUserName, LoginPass, pass)
+        if (LoginUserName == userName && LoginPass == pass && LoginUserName.length > 0 && pass.length > 0){
         console.log(LoginPass)
         setLogin(true)
     }

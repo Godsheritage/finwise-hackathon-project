@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
+import { Link } from "react-router-dom";
 
 const { Header } = Layout;
 
@@ -23,10 +24,24 @@ const HeaderComponent = () => {
             gap: "1rem",
           }}
         >
-          <li>Home</li>
-          <li>Fiancial Analysis</li>
-          <li>Education</li>
-          <li>About</li>
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/savings"}>Savings</Link>
+          </li>
+          <li>
+            <Link to={"/education"}>Education</Link>
+          </li>
+          <li>
+            <Link to={"/budget"}>Budget</Link>
+          </li>
+          <li>
+            <Link to= {"/SignUp"}>Sign Up</Link>
+          </li> 
+          <li>
+            <Link to = {"/LogIn"}>LogIn</Link>
+          </li>
         </ul>
       </div>
       <div>
