@@ -56,7 +56,7 @@ const Budget: React.FC = () => {
 Utilities: Monthly bills for electricity, water, gas, internet, and other essential services.
 Insurance: Health, life, auto, and any other insurance premiums.
 Loan Payments: Payments for loans such as student loans, car loans, or personal loans. */}
-        </Form>
+        </Form>  
       </div>
     </>
   );
