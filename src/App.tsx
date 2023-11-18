@@ -1,13 +1,13 @@
-import './App.css'
+import React from "react";
+import Home from "./pages/home/Home";
 
-function App() {
 
+const App: React.FC = () => {
+  
 
   return (
-    <>
-     <div>Hello</div>
-    </>
-  )
-}
+    <Home/>
+  );
+};
 
-export default App
+export default App;
