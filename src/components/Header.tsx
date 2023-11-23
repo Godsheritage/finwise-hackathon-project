@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
+import logo from "../assets/logo.jpeg"
 import { Link } from "react-router-dom";
 
 const { Header } = Layout;
@@ -11,10 +12,12 @@ const HeaderComponent = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        backgroundColor: "#4E9F3D",
+        opacity:"0.7"
       }}
     >
       {/* <div className="demo-logo" /> */}
-      <h1 style={{ color: "white" }}>Logo</h1>
+      <img src={logo} style={{height:"3.5rem", width:"3.5rem"}} alt="" />
       <div>
         <ul
           style={{
@@ -25,22 +28,24 @@ const HeaderComponent = () => {
           }}
         >
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link to={"/"} style={{ color: "white" }}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to={"/savings"}>Savings</Link>
+            <Link to={"/savings"} style={{ color: "white" }}>
+              Savings
+            </Link>
           </li>
           <li>
-            <Link to={"/education"}>Education</Link>
+            <Link to={"/education"} style={{ color: "white" }}>
+              Education
+            </Link>
           </li>
           <li>
-            <Link to={"/budget"}>Budget</Link>
-          </li>
-          <li>
-            <Link to= {"/SignUp"}>Sign Up</Link>
-          </li> 
-          <li>
-            <Link to = {"/LogIn"}>LogIn</Link>
+            <Link to={"/budget"} style={{ color: "white" }}>
+              Budget
+            </Link>
           </li>
         </ul>
       </div>

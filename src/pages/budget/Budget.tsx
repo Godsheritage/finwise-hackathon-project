@@ -1,16 +1,5 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Cascader,
-  DatePicker,
-  Form,
-  Input,
-  InputNumber,
-  Radio,
-  Select,
-  Switch,
-  TreeSelect,
-} from "antd";
+import { Button, Form, Input } from "antd";
 
 type SizeType = Parameters<typeof Form>[0]["size"];
 
@@ -19,6 +8,8 @@ const Budget: React.FC = () => {
     "default"
   );
 
+  const [budgetVal, setBudgetVal] = useState(0);
+
   const onFormLayoutChange = ({ size }: { size: SizeType }) => {
     setComponentSize(size);
   };
@@ -26,37 +17,23 @@ const Budget: React.FC = () => {
   return (
     <>
       <div style={{ padding: "3rem" }}>
-        <p>Please enter the follwoign information so we could generate a budget</p>
-        <Form
-          labelCol={{ span: 4 }}
-          wrapperCol={{ span: 14 }}
-          layout="horizontal"
-          initialValues={{ size: componentSize }}
-          onValuesChange={onFormLayoutChange}
-          size={componentSize as SizeType}
-          style={{ maxWidth: 600 }}
-        >
-          <Form.Item label="Monthly Salary:  ">
-            <InputNumber />
-          </Form.Item>
-          <Form.Item label="Rent / Morgage: ">
-            <InputNumber />
-          </Form.Item>
-          <Form.Item label="Utility Bills">
-            <InputNumber />
-          </Form.Item>
-          <Form.Item label="Variable Expenses   ">
-            <InputNumber />
-          </Form.Item>
-          <Form.Item>
-            <Button>Get a budget</Button>
-          </Form.Item>
-
-          {/* Rent/Mortgage: The cost of housing.
-Utilities: Monthly bills for electricity, water, gas, internet, and other essential services.
-Insurance: Health, life, auto, and any other insurance premiums.
-Loan Payments: Payments for loans such as student loans, car loans, or personal loans. */}
-        </Form>  
+        <h2>
+          Please enter the following information so we could generate a budget
+        </h2>
+        <div>
+          <p>Monthly after-tax income: </p>
+          <Input
+            style={{ width: "25rem" }}
+            onChange={(e) => setBudgetVal(parseInt(e.target.value))}
+          />
+        </div>
+        <h3>Your 50/30/20 Numbers</h3>
+        <p>Necessities</p>
+        <h3>{!budgetVal ? 0 : "$" + Math.floor(0.5 * budgetVal)}</h3>
+        <p>Wants</p>
+        <h3>{!budgetVal ? 0 : "$" + Math.floor(0.3 * budgetVal)}</h3>
+        <p>Savings and Debt Payment</p>
+        <h3>{!budgetVal ? 0 : "$" + Math.floor(0.2 * budgetVal)}</h3>
       </div>
     </>
   );

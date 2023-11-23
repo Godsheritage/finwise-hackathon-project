@@ -12,7 +12,7 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 
-const API_KEY = "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";
+const API_KEY = "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";
 
 const systemMessage = {
   role: "system",
@@ -107,13 +107,13 @@ const ChatBot = () => {
                 width: "500px",
               }}
             >
-              <MainContainer style={{ backgroundColor: "#70627e" }}>
-                <ChatContainer style={{ backgroundColor: "#70627e" }}>
+              <MainContainer style={{ backgroundColor: "#85BB79" }}>
+                <ChatContainer style={{ backgroundColor: "#85BB79" }}>
                   <MessageList
                     scrollBehavior="smooth"
                     typingIndicator={
                       isTyping ? (
-                        <TypingIndicator content="Roofe is typing" />
+                        <TypingIndicator content="FinWise is typing" />
                       ) : null
                     }
                   >
